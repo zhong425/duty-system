@@ -22,7 +22,6 @@
             align-items: center;
         }
 
-        /* 主容器 */
         .app-container {
             max-width: 1280px;
             width: 100%;
@@ -31,10 +30,8 @@
             border-radius: 40px;
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
             overflow: hidden;
-            transition: all 0.3s;
         }
 
-        /* 页面切换 */
         .page {
             display: none;
             animation: fadeIn 0.3s ease;
@@ -49,7 +46,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* 通用头部 */
         .page-header {
             display: flex;
             justify-content: space-between;
@@ -65,8 +61,6 @@
             font-size: 1.6rem;
             color: #1e466e;
             font-weight: 600;
-            letter-spacing: -0.2px;
-            word-break: keep-all;
         }
 
         .back-home-btn {
@@ -78,11 +72,9 @@
             font-weight: 500;
             color: #2c7da0;
             cursor: pointer;
-            transition: all 0.2s;
             white-space: nowrap;
         }
 
-        /* 主页样式 */
         .home-content {
             padding: 48px 28px 60px;
             text-align: center;
@@ -98,7 +90,6 @@
             font-weight: 700;
             color: #1e466e;
             margin-bottom: 12px;
-            word-break: keep-all;
         }
 
         .home-desc {
@@ -106,8 +97,6 @@
             color: #5a6e82;
             max-width: 550px;
             margin: 0 auto 30px;
-            line-height: 1.5;
-            word-break: break-word;
         }
 
         .home-info-card {
@@ -153,10 +142,8 @@
             background: #2c7da0;
             color: white;
             border: none;
-            box-shadow: 0 8px 18px rgba(44,125,160,0.25);
         }
 
-        /* 值日名单页样式 */
         .duty-content {
             padding: 28px 28px 40px;
         }
@@ -169,7 +156,6 @@
             font-size: 0.95rem;
             color: #2c5a7a;
             text-align: center;
-            border: 1px solid #e0edf5;
         }
 
         .two-col-flex {
@@ -195,7 +181,6 @@
             font-weight: 700;
             text-align: center;
             border-bottom: 2px solid #d9e6f0;
-            color: #1f5068;
         }
 
         .duty-table {
@@ -204,34 +189,20 @@
             font-size: 14px;
         }
 
-        .duty-table th {
-            background: #eef3f8;
-            padding: 10px 8px;
-            border: 1px solid #d2e2ec;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        .duty-table td {
+        .duty-table th, .duty-table td {
             border: 1px solid #dae8f0;
             padding: 10px 8px;
             text-align: center;
-            white-space: nowrap;
+        }
+
+        .duty-table th {
+            background: #eef3f8;
+            font-weight: 600;
         }
 
         @media (max-width: 640px) {
-            .duty-table td {
-                white-space: normal;
-                word-break: keep-all;
-            }
-            .home-btn {
-                white-space: normal;
-                padding: 12px 20px;
-                font-size: 1rem;
-            }
-            .page-header h2 {
-                font-size: 1.3rem;
-            }
+            .duty-table td { white-space: normal; }
+            .home-btn { white-space: normal; padding: 12px 20px; font-size: 1rem; }
         }
 
         .footer-note {
@@ -259,9 +230,8 @@
             cursor: pointer;
         }
 
-        /* 抽签页面 - 上下布局 */
         .lottery-content {
-            padding: 28px 28px 100px; /* 底部留出空间避免被悬浮按钮遮挡 */
+            padding: 28px 28px 100px;
         }
 
         .lottery-vertical {
@@ -277,7 +247,6 @@
             padding: 24px 28px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
             border: 1px solid #e9f0f5;
-            transition: all 0.2s;
         }
 
         .gender-header {
@@ -291,10 +260,8 @@
         .gender-title {
             font-size: 1.6rem;
             font-weight: 700;
-            display: inline-block;
             padding-bottom: 4px;
         }
-
         .gender-title.male { color: #2c6e9e; border-bottom: 3px solid #2c6e9e; }
         .gender-title.female { color: #c45c7c; border-bottom: 3px solid #c45c7c; }
 
@@ -326,8 +293,6 @@
             font-size: 1.2rem;
             font-weight: 700;
             color: #105e8a;
-            word-break: break-word;
-            line-height: 1.4;
         }
 
         .history-area {
@@ -351,14 +316,12 @@
             color: #2b5a7a;
         }
 
-        /* 今日汇总卡片 */
         .summary-card {
             background: linear-gradient(135deg, #fef7e0 0%, #fff5e6 100%);
             border-radius: 32px;
             padding: 22px 28px;
             margin: 20px 0 30px;
             border: 1px solid #f5e3c6;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
         }
 
         .summary-title {
@@ -394,7 +357,6 @@
             border-radius: 20px;
             padding: 14px 18px;
             text-align: center;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
         }
 
         .summary-gender {
@@ -409,17 +371,10 @@
             color: #2c6e9e;
         }
 
-        .empty-summary {
-            color: #bda78b;
-            font-style: italic;
+        @media (max-width: 640px) {
+            .summary-result { flex-direction: column; gap: 12px; }
         }
 
-        /* 隐藏原来的按钮组 */
-        .original-btn-group {
-            display: none;
-        }
-
-        /* 悬浮按钮组 - 简洁美观，右下角，不重叠 */
         .floating-buttons {
             position: fixed;
             bottom: 24px;
@@ -427,23 +382,11 @@
             display: flex;
             gap: 12px;
             z-index: 1000;
-            background: transparent;
         }
 
         @media (max-width: 640px) {
-            .floating-buttons {
-                bottom: 20px;
-                right: 20px;
-                gap: 10px;
-            }
-            .floating-btn {
-                padding: 8px 16px;
-                font-size: 12px;
-            }
-            .summary-result {
-                flex-direction: column;
-                gap: 12px;
-            }
+            .floating-buttons { bottom: 20px; right: 20px; gap: 10px; }
+            .floating-btn { padding: 8px 16px; font-size: 12px; }
         }
 
         .floating-btn {
@@ -453,57 +396,19 @@
             font-weight: 600;
             border-radius: 48px;
             cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            background: white;
-            color: #2c5a7a;
-            backdrop-filter: blur(4px);
-            background-color: rgba(255, 255, 255, 0.95);
-            border: 1px solid rgba(44,125,160,0.3);
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             white-space: nowrap;
         }
 
-        .floating-btn-primary {
-            background: #2c7da0;
-            color: white;
-            border: none;
-        }
-        .floating-btn-warning {
-            background: #f9e6cf;
-            color: #b45f06;
-            border: 1px solid #f4d4a8;
-        }
-        .floating-btn-secondary {
-            background: #eef2f8;
-            color: #2c5a7a;
-        }
+        .floating-btn-primary { background: #2c7da0; color: white; }
+        .floating-btn-warning { background: #f9e6cf; color: #b45f06; }
+        .floating-btn-secondary { background: #eef2f8; color: #2c5a7a; }
 
-        .floating-btn:hover {
-            transform: translateY(-2px);
-        }
-        .floating-btn:active {
-            transform: translateY(1px);
-        }
-
-        .floating-buttons.hide {
-            display: none;
-        }
+        .floating-buttons.hide { display: none; }
 
         @media print {
-            .page-header, .back-home-btn, .floating-buttons, .pdf-btn-wrap, .home-buttons {
-                display: none;
-            }
-            .app-container {
-                box-shadow: none;
-            }
-            body {
-                background: white;
-                padding: 0;
-            }
-            @page {
-                size: A4;
-                margin: 1.5cm;
-            }
+            .page-header, .back-home-btn, .floating-buttons, .pdf-btn-wrap, .home-buttons { display: none; }
         }
     </style>
 </head>
@@ -513,18 +418,17 @@
     <div id="homePage" class="page active">
         <div class="home-content">
             <div class="home-icon">🧹✨</div>
-            <div class="home-title">物联网2501
-            值日助手</div>
+            <div class="home-title">物联网2501 · 值日助手</div>
             <div class="home-desc">公平轮换 · 智能抽签 · 高效管理</div>
             <div class="home-info-card">
-                📌 此网页用于班级值日任务的安排与管理。每次由系统随机抽取一组执行，已抽取小组在下一轮自动剔除，确保公平轮换。<p>🤓 请各位同学认真高效完成值日任务</p>
+                📌 本值日表为常态化分组安排，用于临时值日任务。每次由系统随机抽取一组执行，已抽取小组在下一轮自动剔除，确保公平轮换。请各位同学认真高效完成值日任务。
             </div>
             <div class="home-buttons">
                 <button class="home-btn home-btn-primary" id="goToDutyBtn">📋 查看值日名单</button>
                 <button class="home-btn home-btn-secondary" id="goToLotteryBtn">🎲 随机抽签系统</button>
             </div>
             <div class="footer-note" style="margin-top: 48px; border: none;">
-                本系统用于临时值日任务抽取<p>为确保公平已抽小组自动剔除</p>
+                本系统用于临时值日任务抽取，已抽小组自动剔除，确保公平。
             </div>
         </div>
     </div>
@@ -536,35 +440,29 @@
             <button class="back-home-btn" id="backHomeFromDuty">🏠 返回首页</button>
         </div>
         <div class="duty-content">
-            <div class="group-summary">
-                📊 现有男生10组，女生5组，共15个值日小组。详细分组如下：
-            </div>
+            <div class="group-summary">📊 现有男生10组，女生5组，共15个值日小组。详细分组如下：</div>
             <div class="two-col-flex">
                 <div class="table-panel">
                     <div class="table-title">👨 男生值日小组（共10组）</div>
                     <table class="duty-table">
-                        <thead> <tr><th>组号</th><th>小组成员</th></tr> </thead>
+                        <thead><tr><th>组号</th><th>小组成员</th></tr></thead>
                         <tbody id="maleTableBody"></tbody>
                     </table>
                 </div>
                 <div class="table-panel">
                     <div class="table-title">👩 女生值日小组（共5组）</div>
                     <table class="duty-table">
-                        <thead> <tr><th>组号</th><th>小组成员</th></tr> </thead>
+                        <thead><tr><th>组号</th><th>小组成员</th></tr></thead>
                         <tbody id="femaleTableBody"></tbody>
                     </table>
                 </div>
             </div>
-            <div class="footer-note">
-                ※ 每组同学轮流值日，请严格履行打扫职责，工具用后归还原位，保持环境整洁。
-            </div>
-            <div class="pdf-btn-wrap">
-                <button id="pdfExportBtn" class="btn-pdf">📑 导出值日表 (PDF)</button>
-            </div>
+            <div class="footer-note">※ 每组同学轮流值日，请严格履行打扫职责，工具用后归还原位，保持环境整洁。</div>
+            <div class="pdf-btn-wrap"><button id="pdfExportBtn" class="btn-pdf">📑 导出值日表 (PDF)</button></div>
         </div>
     </div>
 
-    <!-- 抽签系统页面（上下布局） -->
+    <!-- 抽签页面 -->
     <div id="lotteryPage" class="page">
         <div class="page-header">
             <h2>🎲 随机抽签系统</h2>
@@ -572,7 +470,6 @@
         </div>
         <div class="lottery-content">
             <div class="lottery-vertical">
-                <!-- 男生模块在上 -->
                 <div class="gender-card">
                     <div class="gender-header">
                         <span class="gender-title male">👦 男生小组</span>
@@ -583,11 +480,10 @@
                         <div id="maleCurrentResult" class="current-draw">—</div>
                         <div class="history-area">
                             <div class="result-label">📋 已抽小组记录</div>
-                            <div id="maleHistoryList" class="history-list"><span class="empty-history" style="color:#95a9bb;">暂无</span></div>
+                            <div id="maleHistoryList" class="history-list"></div>
                         </div>
                     </div>
                 </div>
-                <!-- 女生模块在下 -->
                 <div class="gender-card">
                     <div class="gender-header">
                         <span class="gender-title female">👧 女生小组</span>
@@ -598,31 +494,20 @@
                         <div id="femaleCurrentResult" class="current-draw">—</div>
                         <div class="history-area">
                             <div class="result-label">📋 已抽小组记录</div>
-                            <div id="femaleHistoryList" class="history-list"><span class="empty-history" style="color:#95a9bb;">暂无</span></div>
+                            <div id="femaleHistoryList" class="history-list"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 今日抽签汇总模块 -->
-            <div class="summary-card" id="summaryCard">
-                <div class="summary-title">
-                    📅 今日抽签汇总
-                    <span class="summary-date" id="summaryDate"></span>
-                </div>
-                <div class="summary-result" id="summaryResult">
-                    <div class="summary-item">
-                        <div class="summary-gender">👨 男生小组</div>
-                        <div class="summary-group" id="summaryMale">—</div>
-                    </div>
-                    <div class="summary-item">
-                        <div class="summary-gender">👩 女生小组</div>
-                        <div class="summary-group" id="summaryFemale">—</div>
-                    </div>
+            <div class="summary-card">
+                <div class="summary-title">📅 今日抽签汇总<span class="summary-date" id="summaryDate"></span></div>
+                <div class="summary-result">
+                    <div class="summary-item"><div class="summary-gender">👨 男生小组</div><div class="summary-group" id="summaryMale">—</div></div>
+                    <div class="summary-item"><div class="summary-gender">👩 女生小组</div><div class="summary-group" id="summaryFemale">—</div></div>
                 </div>
             </div>
 
-            <!-- 导出按钮保留在原位置 -->
             <div style="text-align: center; margin-top: 20px;">
                 <button id="exportHistoryBtn" class="btn-pdf" style="background: #2e7d64;">📄 导出抽签记录</button>
             </div>
@@ -630,7 +515,6 @@
     </div>
 </div>
 
-<!-- 悬浮按钮组（仅抽签页面可见） -->
 <div id="floatingButtons" class="floating-buttons hide">
     <button id="floatingDrawBtn" class="floating-btn floating-btn-primary">🎯 抽取</button>
     <button id="floatingUndoBtn" class="floating-btn floating-btn-warning">↩️ 撤销</button>
@@ -638,107 +522,98 @@
 </div>
 
 <script>
-    // ======================== 数据定义 ========================
+    // ---------- 数据 ----------
     const maleGroupsRaw = [
-        { id: 1, members: "欧阳航　揭畅" },
-        { id: 2, members: "赵兴轮　钟鑫" },
-        { id: 3, members: "吴国松　王振南" },
-        { id: 4, members: "艾春雷　李云峰" },
-        { id: 5, members: "蒙瑞　李云祥" },
-        { id: 6, members: "张瑞熙　许聪林" },
-        { id: 7, members: "李映楠　纳宇翔" },
-        { id: 8, members: "赵思成　周丽聪" },
-        { id: 9, members: "李嘉恒　吴玉豪" },
-        { id: 10, members: "田瑞敏　沈选俊　黄文建" }
+        { id: 1, members: "欧阳航　揭畅" }, { id: 2, members: "赵兴轮　钟鑫" },
+        { id: 3, members: "吴国松　王振南" }, { id: 4, members: "艾春雷　李云峰" },
+        { id: 5, members: "蒙瑞　李云祥" }, { id: 6, members: "张瑞熙　许聪林" },
+        { id: 7, members: "李映楠　纳宇翔" }, { id: 8, members: "赵思成　周丽聪" },
+        { id: 9, members: "李嘉恒　吴玉豪" }, { id: 10, members: "田瑞敏　沈选俊　黄文建" }
     ];
     const femaleGroupsRaw = [
-        { id: 1, members: "李家羚　杨思滢" },
-        { id: 2, members: "余松花　尹娜" },
-        { id: 3, members: "刘淼　杨静杭" },
-        { id: 4, members: "余燕飞　符雪蓉" },
+        { id: 1, members: "李家羚　杨思滢" }, { id: 2, members: "余松花　尹娜" },
+        { id: 3, members: "刘淼　杨静杭" }, { id: 4, members: "余燕飞　符雪蓉" },
         { id: 5, members: "王万会　易香杉　陆丽丽" }
     ];
 
-    // 抽签状态
-    let maleRemaining = [];
-    let femaleRemaining = [];
-    let maleDrawnHistory = [];
-    let femaleDrawnHistory = [];
+    let maleRemaining = [], femaleRemaining = [];
+    let maleDrawnHistory = [], femaleDrawnHistory = [];
     let historyStack = [];
+    let lastMaleGroup = null, lastFemaleGroup = null;
 
-    // 存储最近一次抽中的小组（用于汇总显示）
-    let lastMaleGroup = null;
-    let lastFemaleGroup = null;
+    const STORAGE_KEY = 'duty_lottery_state';
 
-    // 更新抽签UI
+    // 保存状态
+    function saveState() {
+        const state = {
+            maleRemaining, femaleRemaining,
+            maleDrawnHistory, femaleDrawnHistory,
+            historyStack,
+            lastMaleGroup, lastFemaleGroup
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    // 加载状态
+    function loadState() {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return false;
+        try {
+            const s = JSON.parse(raw);
+            maleRemaining = s.maleRemaining;
+            femaleRemaining = s.femaleRemaining;
+            maleDrawnHistory = s.maleDrawnHistory;
+            femaleDrawnHistory = s.femaleDrawnHistory;
+            historyStack = s.historyStack;
+            lastMaleGroup = s.lastMaleGroup;
+            lastFemaleGroup = s.lastFemaleGroup;
+            return true;
+        } catch(e) { return false; }
+    }
+
+    // UI 更新
     function updateLotteryUI() {
         document.getElementById('maleRemainCount').innerText = `剩余 ${maleRemaining.length} 组`;
         document.getElementById('femaleRemainCount').innerText = `剩余 ${femaleRemaining.length} 组`;
-
-        const maleHistoryDiv = document.getElementById('maleHistoryList');
-        if (maleDrawnHistory.length === 0) maleHistoryDiv.innerHTML = '<span class="empty-history" style="color:#95a9bb;">暂无</span>';
-        else maleHistoryDiv.innerHTML = maleDrawnHistory.map(g => `<span class="history-badge">第${g.id}组 (${g.members})</span>`).join('');
-
-        const femaleHistoryDiv = document.getElementById('femaleHistoryList');
-        if (femaleDrawnHistory.length === 0) femaleHistoryDiv.innerHTML = '<span class="empty-history" style="color:#95a9bb;">暂无</span>';
-        else femaleHistoryDiv.innerHTML = femaleDrawnHistory.map(g => `<span class="history-badge">第${g.id}组 (${g.members})</span>`).join('');
+        const maleHistDiv = document.getElementById('maleHistoryList');
+        if (maleDrawnHistory.length === 0) maleHistDiv.innerHTML = '<span style="color:#95a9bb;">暂无</span>';
+        else maleHistDiv.innerHTML = maleDrawnHistory.map(g => `<span class="history-badge">第${g.id}组 (${g.members})</span>`).join('');
+        const femaleHistDiv = document.getElementById('femaleHistoryList');
+        if (femaleDrawnHistory.length === 0) femaleHistDiv.innerHTML = '<span style="color:#95a9bb;">暂无</span>';
+        else femaleHistDiv.innerHTML = femaleDrawnHistory.map(g => `<span class="history-badge">第${g.id}组 (${g.members})</span>`).join('');
     }
 
-    // 更新汇总模块（显示日期和最新抽取结果）
     function updateSummary() {
-        // 更新日期
         const today = new Date();
-        const year = today.getFullYear();
-        const month = String(today.getMonth() + 1).padStart(2, '0');
-        const day = String(today.getDate()).padStart(2, '0');
-        const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
-        const weekday = weekdays[today.getDay()];
-        document.getElementById('summaryDate').innerText = `${year}.${month}.${day} ${weekday}`;
-
-        // 更新抽中小组
-        const maleElem = document.getElementById('summaryMale');
-        const femaleElem = document.getElementById('summaryFemale');
-        if (lastMaleGroup) {
-            maleElem.innerHTML = `第${lastMaleGroup.id}组：${lastMaleGroup.members}`;
-        } else {
-            maleElem.innerHTML = '—';
-        }
-        if (lastFemaleGroup) {
-            femaleElem.innerHTML = `第${lastFemaleGroup.id}组：${lastFemaleGroup.members}`;
-        } else {
-            femaleElem.innerHTML = '—';
-        }
+        const yyyy = today.getFullYear(), mm = String(today.getMonth()+1).padStart(2,'0'), dd = String(today.getDate()).padStart(2,'0');
+        const weekdays = ['周日','周一','周二','周三','周四','周五','周六'];
+        document.getElementById('summaryDate').innerText = `${yyyy}.${mm}.${dd} ${weekdays[today.getDay()]}`;
+        document.getElementById('summaryMale').innerHTML = lastMaleGroup ? `第${lastMaleGroup.id}组：${lastMaleGroup.members}` : '—';
+        document.getElementById('summaryFemale').innerHTML = lastFemaleGroup ? `第${lastFemaleGroup.id}组：${lastFemaleGroup.members}` : '—';
     }
 
-    // 重置单个性别
     function resetSingleGender(gender) {
         if (gender === 'male') {
-            maleRemaining = maleGroupsRaw.map(g => ({ ...g }));
+            maleRemaining = maleGroupsRaw.map(g => ({...g}));
             maleDrawnHistory = [];
             document.getElementById('maleCurrentResult').innerHTML = '—';
             historyStack = historyStack.filter(item => item.gender !== 'male');
-            // 如果重置了男生，且当前汇总中男生是最后一次抽取，则清空汇总中的男生显示（可选）
-            if (lastMaleGroup) {
-                lastMaleGroup = null;
-                updateSummary();
-            }
+            if (lastMaleGroup) lastMaleGroup = null;
         } else {
-            femaleRemaining = femaleGroupsRaw.map(g => ({ ...g }));
+            femaleRemaining = femaleGroupsRaw.map(g => ({...g}));
             femaleDrawnHistory = [];
             document.getElementById('femaleCurrentResult').innerHTML = '—';
             historyStack = historyStack.filter(item => item.gender !== 'female');
-            if (lastFemaleGroup) {
-                lastFemaleGroup = null;
-                updateSummary();
-            }
+            if (lastFemaleGroup) lastFemaleGroup = null;
         }
         updateLotteryUI();
+        updateSummary();
+        saveState();
     }
 
-    // 完全复位抽签系统
     function resetFullLottery() {
-        maleRemaining = maleGroupsRaw.map(g => ({ ...g }));
-        femaleRemaining = femaleGroupsRaw.map(g => ({ ...g }));
+        maleRemaining = maleGroupsRaw.map(g => ({...g}));
+        femaleRemaining = femaleGroupsRaw.map(g => ({...g}));
         maleDrawnHistory = [];
         femaleDrawnHistory = [];
         historyStack = [];
@@ -748,89 +623,71 @@
         document.getElementById('femaleCurrentResult').innerHTML = '—';
         updateLotteryUI();
         updateSummary();
+        saveState();
     }
 
-    // 处理性别不对等
-    function handleGenderImbalance() {
-        if (maleRemaining.length === 0 && femaleRemaining.length > 0) {
-            if (confirm(`男生小组已全部抽完，但还有 ${femaleRemaining.length} 组女生未抽。\n是否重置男生小组记录，与女生剩余小组继续配对抽取？`)) {
-                resetSingleGender('male');
-                alert('男生小组记录已重置，所有男生小组重新加入抽签池！');
-                return true;
-            }
-            return false;
-        }
-        else if (femaleRemaining.length === 0 && maleRemaining.length > 0) {
-            if (confirm(`女生小组已全部抽完，但还有 ${maleRemaining.length} 组男生未抽。\n是否重置女生小组记录，与男生剩余小组继续配对抽取？`)) {
-                resetSingleGender('female');
-                alert('女生小组记录已重置，所有女生小组重新加入抽签池！');
-                return true;
-            }
-            return false;
-        }
-        return false;
-    }
-
-    // 抽取单个性别
     function drawGender(remaining, drawn, gender) {
         if (remaining.length === 0) return null;
-        const rand = Math.floor(Math.random() * remaining.length);
-        const drawnGroup = remaining[rand];
-        remaining.splice(rand, 1);
-        drawn.push(drawnGroup);
-        historyStack.push({ type: 'draw', gender, group: { ...drawnGroup } });
-        return drawnGroup;
+        const idx = Math.floor(Math.random() * remaining.length);
+        const group = remaining[idx];
+        remaining.splice(idx, 1);
+        drawn.push(group);
+        historyStack.push({ type: 'draw', gender, group: {...group} });
+        return group;
     }
 
-    // 抽签主逻辑
+    function animateDraw(gender) {
+        const el = document.getElementById(gender === 'male' ? 'maleCurrentResult' : 'femaleCurrentResult');
+        if (el) { el.style.transform = 'scale(1.02)'; setTimeout(() => el.style.transform = '', 200); }
+    }
+
     function performDraw() {
-        let maleResult = null, femaleResult = null;
         if (maleRemaining.length > 0) {
-            maleResult = drawGender(maleRemaining, maleDrawnHistory, 'male');
-            if (maleResult) {
-                document.getElementById('maleCurrentResult').innerHTML = `第${maleResult.id}组：${maleResult.members}`;
-                lastMaleGroup = maleResult;
+            const maleRes = drawGender(maleRemaining, maleDrawnHistory, 'male');
+            if (maleRes) {
+                document.getElementById('maleCurrentResult').innerHTML = `第${maleRes.id}组：${maleRes.members}`;
+                lastMaleGroup = maleRes;
                 animateDraw('male');
             }
         } else {
             document.getElementById('maleCurrentResult').innerHTML = '⚠️ 无剩余小组';
         }
         if (femaleRemaining.length > 0) {
-            femaleResult = drawGender(femaleRemaining, femaleDrawnHistory, 'female');
-            if (femaleResult) {
-                document.getElementById('femaleCurrentResult').innerHTML = `第${femaleResult.id}组：${femaleResult.members}`;
-                lastFemaleGroup = femaleResult;
+            const femaleRes = drawGender(femaleRemaining, femaleDrawnHistory, 'female');
+            if (femaleRes) {
+                document.getElementById('femaleCurrentResult').innerHTML = `第${femaleRes.id}组：${femaleRes.members}`;
+                lastFemaleGroup = femaleRes;
                 animateDraw('female');
             }
         } else {
             document.getElementById('femaleCurrentResult').innerHTML = '⚠️ 无剩余小组';
         }
         updateLotteryUI();
-        updateSummary();  // 刷新汇总模块
+        updateSummary();
+        saveState();
 
         if ((maleRemaining.length === 0 && femaleRemaining.length > 0) || (femaleRemaining.length === 0 && maleRemaining.length > 0)) {
-            setTimeout(() => { handleGenderImbalance(); }, 100);
+            setTimeout(() => {
+                if (maleRemaining.length === 0 && femaleRemaining.length > 0) {
+                    if (confirm(`男生小组已全部抽完，但还有 ${femaleRemaining.length} 组女生未抽。\n是否重置男生小组记录，与女生剩余小组继续配对抽取？`)) {
+                        resetSingleGender('male');
+                        alert('男生小组记录已重置，所有男生小组重新加入抽签池！');
+                    }
+                } else if (femaleRemaining.length === 0 && maleRemaining.length > 0) {
+                    if (confirm(`女生小组已全部抽完，但还有 ${maleRemaining.length} 组男生未抽。\n是否重置女生小组记录，与男生剩余小组继续配对抽取？`)) {
+                        resetSingleGender('female');
+                        alert('女生小组记录已重置，所有女生小组重新加入抽签池！');
+                    }
+                }
+            }, 100);
         }
         if (maleRemaining.length === 0 && femaleRemaining.length === 0) {
             setTimeout(() => alert('所有小组均已抽完！点击“重置所有记录”可重新开始。'), 80);
         }
     }
 
-    // 动效
-    function animateDraw(gender) {
-        const el = document.getElementById(gender === 'male' ? 'maleCurrentResult' : 'femaleCurrentResult');
-        if (el) {
-            el.style.transform = 'scale(1.02)';
-            setTimeout(() => { el.style.transform = ''; }, 200);
-        }
-    }
-
-    // 撤销上一步
     function undoLastDraw() {
-        if (historyStack.length === 0) {
-            alert('没有可撤销的操作');
-            return;
-        }
+        if (historyStack.length === 0) { alert('没有可撤销的操作'); return; }
         const last = historyStack.pop();
         if (last.type === 'draw') {
             const { gender, group } = last;
@@ -840,7 +697,6 @@
                 maleRemaining.push(group);
                 const lastMale = maleDrawnHistory[maleDrawnHistory.length - 1];
                 document.getElementById('maleCurrentResult').innerHTML = lastMale ? `第${lastMale.id}组：${lastMale.members}` : '—';
-                // 更新最近抽取记录
                 lastMaleGroup = lastMale || null;
             } else {
                 const idx = femaleDrawnHistory.findIndex(g => g.id === group.id && g.members === group.members);
@@ -851,11 +707,11 @@
                 lastFemaleGroup = lastFemale || null;
             }
             updateLotteryUI();
-            updateSummary(); // 刷新汇总
+            updateSummary();
+            saveState();
         }
     }
 
-    // 导出抽签记录TXT
     function exportHistoryToTxt() {
         let content = "===== 物联网2501 抽签记录 =====\n";
         content += `导出时间: ${new Date().toLocaleString()}\n\n`;
@@ -877,74 +733,59 @@
         URL.revokeObjectURL(url);
     }
 
-    // 渲染值日表格
     function renderDutyTables() {
         const maleTbody = document.getElementById('maleTableBody');
         maleTbody.innerHTML = '';
-        maleGroupsRaw.forEach(g => { maleTbody.insertAdjacentHTML('beforeend', `<tr><td>${g.id}</td><td>${g.members}</td></tr>`); });
+        maleGroupsRaw.forEach(g => maleTbody.insertAdjacentHTML('beforeend', `<tr><td>${g.id}</td><td>${g.members}</td></tr>`));
         const femaleTbody = document.getElementById('femaleTableBody');
         femaleTbody.innerHTML = '';
-        femaleGroupsRaw.forEach(g => { femaleTbody.insertAdjacentHTML('beforeend', `<tr><td>${g.id}</td><td>${g.members}</td></tr>`); });
+        femaleGroupsRaw.forEach(g => femaleTbody.insertAdjacentHTML('beforeend', `<tr><td>${g.id}</td><td>${g.members}</td></tr>`));
     }
 
-    // PDF 导出
-    function exportPDF() {
-        window.print();
-    }
+    function exportPDF() { window.print(); }
 
-    // 页面切换，控制悬浮按钮显示/隐藏
     function showPage(pageId) {
         document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
         document.getElementById(pageId).classList.add('active');
         const floating = document.getElementById('floatingButtons');
-        if (pageId === 'lotteryPage') {
-            floating.classList.remove('hide');
-        } else {
-            floating.classList.add('hide');
-        }
+        if (pageId === 'lotteryPage') floating.classList.remove('hide');
+        else floating.classList.add('hide');
     }
 
-    // 初始化抽签状态
-    function initLotteryState() {
-        maleRemaining = maleGroupsRaw.map(g => ({ ...g }));
-        femaleRemaining = femaleGroupsRaw.map(g => ({ ...g }));
-        maleDrawnHistory = [];
-        femaleDrawnHistory = [];
-        historyStack = [];
-        lastMaleGroup = null;
-        lastFemaleGroup = null;
-        document.getElementById('maleCurrentResult').innerHTML = '—';
-        document.getElementById('femaleCurrentResult').innerHTML = '—';
-        updateLotteryUI();
-        updateSummary();
-    }
-
-    // 绑定事件
     function init() {
         renderDutyTables();
-        initLotteryState();
+        const loaded = loadState();
+        if (!loaded) {
+            // 全新初始化
+            maleRemaining = maleGroupsRaw.map(g => ({...g}));
+            femaleRemaining = femaleGroupsRaw.map(g => ({...g}));
+            maleDrawnHistory = [];
+            femaleDrawnHistory = [];
+            historyStack = [];
+            lastMaleGroup = null;
+            lastFemaleGroup = null;
+            document.getElementById('maleCurrentResult').innerHTML = '—';
+            document.getElementById('femaleCurrentResult').innerHTML = '—';
+            updateLotteryUI();
+            updateSummary();
+        } else {
+            // 恢复显示
+            document.getElementById('maleCurrentResult').innerHTML = lastMaleGroup ? `第${lastMaleGroup.id}组：${lastMaleGroup.members}` : '—';
+            document.getElementById('femaleCurrentResult').innerHTML = lastFemaleGroup ? `第${lastFemaleGroup.id}组：${lastFemaleGroup.members}` : '—';
+            updateLotteryUI();
+            updateSummary();
+        }
 
-        // 主页按钮
-        document.getElementById('goToDutyBtn').addEventListener('click', () => showPage('dutyPage'));
-        document.getElementById('goToLotteryBtn').addEventListener('click', () => showPage('lotteryPage'));
-        document.getElementById('backHomeFromDuty').addEventListener('click', () => showPage('homePage'));
-        document.getElementById('backHomeFromLottery').addEventListener('click', () => showPage('homePage'));
-
-        // 悬浮按钮绑定抽签操作
-        document.getElementById('floatingDrawBtn').addEventListener('click', performDraw);
-        document.getElementById('floatingUndoBtn').addEventListener('click', undoLastDraw);
-        document.getElementById('floatingResetBtn').addEventListener('click', () => {
-            if (confirm('重置后所有抽签记录将清空，小组全部恢复。确定重置吗？')) {
-                resetFullLottery();
-                alert('抽签系统已重置');
-            }
-        });
-
-        // 导出按钮
-        document.getElementById('exportHistoryBtn').addEventListener('click', exportHistoryToTxt);
-        document.getElementById('pdfExportBtn').addEventListener('click', exportPDF);
-
-        // 初始隐藏悬浮按钮（首页状态）
+        // 绑定事件
+        document.getElementById('goToDutyBtn').onclick = () => showPage('dutyPage');
+        document.getElementById('goToLotteryBtn').onclick = () => showPage('lotteryPage');
+        document.getElementById('backHomeFromDuty').onclick = () => showPage('homePage');
+        document.getElementById('backHomeFromLottery').onclick = () => showPage('homePage');
+        document.getElementById('floatingDrawBtn').onclick = performDraw;
+        document.getElementById('floatingUndoBtn').onclick = undoLastDraw;
+        document.getElementById('floatingResetBtn').onclick = () => { if(confirm('重置后所有抽签记录将清空，小组全部恢复。确定重置吗？')) { resetFullLottery(); alert('抽签系统已重置'); } };
+        document.getElementById('exportHistoryBtn').onclick = exportHistoryToTxt;
+        document.getElementById('pdfExportBtn').onclick = exportPDF;
         document.getElementById('floatingButtons').classList.add('hide');
     }
 
